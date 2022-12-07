@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileScreen"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Edit Profile"
+            android:textColor="#40C4FF"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Full Name"
+            android:textColorHint="#CAC9C9"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/input_round_border"/>
+
+        <EditText
+            android:id="@+id/phoneField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Phone Number"
+            android:textColorHint="#CAC9C9"
+            android:inputType="textPhonetic"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/input_round_border"/>
+
+        <EditText
+            android:id="@+id/dobField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Date of Birth"
+            android:textColorHint="#CAC9C9"
+            android:inputType="date"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/input_round_border"/>
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/input_round_border"
+            android:backgroundTint="#40C4FF"
+            android:text="Edit Profie"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:backgroundTint="#40C4FF"/>
+
+        <ProgressBar
+            android:id="@+id/pgBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

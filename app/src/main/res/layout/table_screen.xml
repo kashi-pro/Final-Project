@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableScreen"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/outdoor_table_4"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seize the moment with the amazing view of lake and mountains and make this moment special"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Persons:   4"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick a Date"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 Thu"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick a Time"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:00 PM"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#40C4FF"
+                        android:background="@drawable/table_property_style"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/bookBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_round_border"
+                android:backgroundTint="#40C4FF"
+                android:text="Book Table"
+                android:textColor="@color/white"
+                app:backgroundTint="#40C4FF"
+                android:layout_marginTop="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

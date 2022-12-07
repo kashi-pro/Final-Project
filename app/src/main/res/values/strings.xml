@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Booking</string>
+    <string name="table_booking">Table Booking</string>
+    <string name="signup">Signup</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_maps_screen">MapsScreen</string>
+</resources>

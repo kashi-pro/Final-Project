@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1088538114983",
+    "firebase_url": "https://table-booking-app-7a1e8-default-rtdb.firebaseio.com",
+    "project_id": "table-booking-app-7a1e8",
+    "storage_bucket": "table-booking-app-7a1e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088538114983:android:4571cf5216dde466dd5482",
+        "android_client_info": {
+          "package_name": "com.assignment.booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088538114983-1u0mnesj3bvti0qmpaegdka33qgkqs5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtDhdh20b2mH8j6cLK-npUmQ84BW5kuyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088538114983-1u0mnesj3bvti0qmpaegdka33qgkqs5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
