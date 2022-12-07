@@ -2,11 +2,11 @@ package com.assignment.booking;
 
 public class TableModel {
 
-    String name;
-    String location;
-    int numOfGuests;
-    String description;
-    String imgURL;
+    public String name;
+    public String location;
+    public int numOfGuests;
+    public String description;
+    public String imgURL;
 
     //Default Constructor
     public TableModel() {}

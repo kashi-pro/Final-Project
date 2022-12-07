@@ -70,7 +70,7 @@ public class ProfileScreen extends AppCompatActivity {
                         emailField.setText("Email: "+ tempCustomer.getEmail());
                         dobField.setText("Date of Birth: "+ tempCustomer.getDob());
                         phoneField.setText("Phone #: "+ tempCustomer.getPhone());
-                        Picasso.with(ProfileScreen.this).load(tempCustomer.getImagePath()).into(profileImageField);
+                        Picasso.get().load(tempCustomer.getImagePath()).into(profileImageField);
                     }
                 }
             }

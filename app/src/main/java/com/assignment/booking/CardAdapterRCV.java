@@ -28,17 +28,18 @@ public class CardAdapterRCV extends RecyclerView.Adapter<CardAdapterRCV.cardHold
     @NonNull
     @Override
     public cardHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflatedView= LayoutInflater.from(ctx).inflate(R.layout.table_layout_template, parent, false);
+        View inflatedView= LayoutInflater.from(parent.getContext()).inflate(R.layout.table_layout_template, parent, false);
         return new cardHolder(inflatedView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull cardHolder holder, int position) {
+
         TableModel table= tableList.get(position);
         holder.tableNamePlace.setText(table.getName());
         holder.locationPlace.setText(table.getLocation());
-        holder.numGuestPlace.setText(table.getNumOfGuests());
-        Picasso.with(holder.tablePicPlace.getContext()).load(table.getImgURL()).into(holder.tablePicPlace);
+        holder.numGuestPlace.setText(String.valueOf(table.getNumOfGuests()));
+        Picasso.get().load(table.getImgURL()).into(holder.tablePicPlace);
     }
 
     @Override

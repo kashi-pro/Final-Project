@@ -24,16 +24,26 @@ import java.util.Objects;
 
 public class HomeScreen extends AppCompatActivity {
 
-    //XML Component
+    //XML Components
     ImageView profileIcon;
-    RecyclerView cardRecyclerView;
-    CardAdapterRCV adapter;
+    RecyclerView cardRCV;
 
-    ArrayList<TableModel> tableList= new ArrayList<>();
-    FirebaseDatabase database= FirebaseDatabase.getInstance();;
-    DatabaseReference dbReference= database.getReference();;
+    //Firebase Objects to Fetch Data from Database
+    FirebaseDatabase database;
+    DatabaseReference dbReference;
 
-    FirebaseUser mUser;
+    //FirebaseUser object to check user
+    FirebaseUser mUser= FirebaseAuth.getInstance().getCurrentUser();
+
+    //ArrayList of type TableModel
+    ArrayList<TableModel> tableList;
+
+    //Firebase Recycler option
+//    FirebaseRecyclerOptions<TableModel> options;
+//    FirebaseRecyclerAdapter<TableModel, CardViewHolder>adapter;
+
+    //Adapter Object to show list
+    CardAdapterRCV cardAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,52 +51,76 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.home_screen);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        //Getting data from firebase
-        dbReference.child("Tables").addValueEventListener(new ValueEventListener() {
+        //Binding XML with Java
+        profileIcon= findViewById(R.id.profileIcon);
+        cardRCV= findViewById(R.id.cardRCV);
+        cardRCV.setLayoutManager(new LinearLayoutManager(HomeScreen.this));
+        cardRCV.hasFixedSize();
+
+        //OnClick Listener on profileIcon
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeScreen.this, ProfileScreen.class));
+            }
+        });
+
+        //Initializing ArrayList
+        tableList= new ArrayList<>();
+
+//        loadTableData();
+
+//        //Setting Recycler view with adapter
+//        cardAdapter= new CardAdapterRCV(this, tableList);
+//        cardRCV.setAdapter(cardAdapter);
+//
+//        //Fetching all tables from Database
+        database= FirebaseDatabase.getInstance();
+        dbReference= database.getReference().child("Tables");
+
+        dbReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot tableSnap : snapshot.getChildren()) {
-                    tableList.add(tableSnap.getValue(TableModel.class));
+                ArrayList<TableModel> list= new ArrayList<>();
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    TableModel tempTable= dataSnapshot.getValue(TableModel.class);
+                    list.add(tempTable);
                 }
-//                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-//                    tempModel.setName(dataSnapshot.child("name").getValue(String.class));
-//                    tempModel.setLocation(dataSnapshot.child("location").getValue(String.class));
-//                    tempModel.setNumOfGuests(dataSnapshot.child("numOfGuests").getValue(Integer.class));
-//                    tempModel.setDescription(dataSnapshot.child("description").getValue(String.class));
-//                    tempModel.setImgURL(dataSnapshot.child("imgURL").getValue(String.class));
-//
-//                    tableList.add(tempModel);
-//
-//                }
+                //Setting Recycler view with adapter
+                cardAdapter= new CardAdapterRCV(HomeScreen.this, list);
+                cardRCV.setAdapter(cardAdapter);
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(HomeScreen.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
-        //Recycler View Process
-        cardRecyclerView= findViewById(R.id.cardRCV);
-        cardRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter= new CardAdapterRCV(this, tableList);
-        cardRecyclerView.setAdapter(adapter);
-
-        if(tableList.size() == 0) {
-            Toast.makeText(this, "List is empty", Toast.LENGTH_SHORT).show();
-        }
-        
-
-
-        //Profile Icon onClick Listener
-        profileIcon= findViewById(R.id.profileIcon);
-        profileIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent toProfile= new Intent(HomeScreen.this, ProfileScreen.class);
-                startActivity(toProfile);
-            }
-        });
     }
+
+//    private void loadTableData() {
+//        options= new FirebaseRecyclerOptions.Builder<TableModel>().setQuery(dbReference, TableModel.class).build();
+//        adapter= new FirebaseRecyclerAdapter<TableModel, CardViewHolder>(options) {
+//            @Override
+//            protected void onBindViewHolder(@NonNull CardViewHolder holder, int position, @NonNull TableModel model) {
+//                holder.tableNamePlace.setText(model.getName());
+//                holder.locationPlace.setText(model.getLocation());
+//                holder.numGuestPlace.setText(model.getNumOfGuests());
+//                Picasso.get().load(model.getImgURL()).into(holder.tablePicPlace);
+//            }
+//
+//            @NonNull
+//            @Override
+//            public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//                View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.table_layout_template, parent, false);
+//                return new CardViewHolder(view);
+//            }
+//        };
+////        adapter.startListening();
+//        cardRCV.setAdapter(adapter);
+//
+//    }
 
     @Override
     protected void onStart() {

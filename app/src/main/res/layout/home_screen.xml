@@ -197,7 +197,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardRCV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="15dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 
